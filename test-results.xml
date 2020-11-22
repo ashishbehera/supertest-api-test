@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="11.7280" tests="17" failures="9">
+  <testsuite name="Root Suite" timestamp="2020-11-22T08:28:52" tests="0" time="0.0000" failures="0">
+  </testsuite>
+  <testsuite name="User Posts" timestamp="2020-11-22T08:28:52" tests="2" file="/Users/ashbeher/Desktop/Personal/InterviewPrep/Automation/supertest-api-test/test/post.js" time="1.2600" failures="1">
+    <testcase name="User Posts POST /posts" time="0.6350" classname="POST /posts">
+      <failure message="expected { message: &apos;Authentication failed&apos; } to have deep property &apos;user_id&apos;" type="AssertionError"><![CDATA[AssertionError: expected { message: 'Authentication failed' } to have deep property 'user_id'
+    at _callee2$ (test/post.js:30:43)
+    at tryCatch (node_modules/regenerator-runtime/runtime.js:63:40)
+    at Generator.invoke [as _invoke] (node_modules/regenerator-runtime/runtime.js:293:22)
+    at Generator.next (node_modules/regenerator-runtime/runtime.js:118:21)
+    at asyncGeneratorStep (node_modules/@babel/runtime/helpers/asyncToGenerator.js:3:24)
+    at _next (node_modules/@babel/runtime/helpers/asyncToGenerator.js:25:9)
+    at processTicksAndRejections (internal/process/next_tick.js:81:5)]]></failure>
+    </testcase>
+    <testcase name="User Posts GET /posts/:id" time="0.6250" classname="GET /posts/:id">
+    </testcase>
+  </testsuite>
+  <testsuite name="Negative Tests" timestamp="2020-11-22T08:28:54" tests="3" file="/Users/ashbeher/Desktop/Personal/InterviewPrep/Automation/supertest-api-test/test/post.js" time="1.8760" failures="2">
+    <testcase name="User Posts Negative Tests 401 Authentication Failed" time="0.6290" classname="401 Authentication Failed">
+    </testcase>
+    <testcase name="User Posts Negative Tests 422 Data Validation Failed" time="0.6580" classname="422 Data Validation Failed">
+      <failure message="expected 401 to equal 422" type="AssertionError"><![CDATA[AssertionError: expected 401 to equal 422
+    at _callee5$ (test/post.js:72:42)
+    at tryCatch (node_modules/regenerator-runtime/runtime.js:63:40)
+    at Generator.invoke [as _invoke] (node_modules/regenerator-runtime/runtime.js:293:22)
+    at Generator.next (node_modules/regenerator-runtime/runtime.js:118:21)
+    at asyncGeneratorStep (node_modules/@babel/runtime/helpers/asyncToGenerator.js:3:24)
+    at _next (node_modules/@babel/runtime/helpers/asyncToGenerator.js:25:9)
+    at processTicksAndRejections (internal/process/next_tick.js:81:5)]]></failure>
+    </testcase>
+    <testcase name="User Posts Negative Tests 422 for Invalid Data for userID" time="0.5890" classname="422 for Invalid Data for userID">
+      <failure message="expected 401 to equal 422" type="AssertionError"><![CDATA[AssertionError: expected 401 to equal 422
+    at _callee6$ (test/post.js:93:46)
+    at tryCatch (node_modules/regenerator-runtime/runtime.js:63:40)
+    at Generator.invoke [as _invoke] (node_modules/regenerator-runtime/runtime.js:293:22)
+    at Generator.next (node_modules/regenerator-runtime/runtime.js:118:21)
+    at asyncGeneratorStep (node_modules/@babel/runtime/helpers/asyncToGenerator.js:3:24)
+    at _next (node_modules/@babel/runtime/helpers/asyncToGenerator.js:25:9)
+    at processTicksAndRejections (internal/process/next_tick.js:81:5)]]></failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="Users" timestamp="2020-11-22T08:28:56" tests="0" file="/Users/ashbeher/Desktop/Personal/InterviewPrep/Automation/supertest-api-test/test/users-advanced.js" time="0.0000" failures="0">
+  </testsuite>
+  <testsuite name="POST" timestamp="2020-11-22T08:28:56" tests="1" file="/Users/ashbeher/Desktop/Personal/InterviewPrep/Automation/supertest-api-test/test/users-advanced.js" time="0.6800" failures="1">
+    <testcase name="Users POST /users" time="0.6800" classname="/users">
+      <failure message="expected { message: &apos;Authentication failed&apos; } to have deep property &apos;email&apos;" type="AssertionError"><![CDATA[AssertionError: expected { message: 'Authentication failed' } to have deep property 'email'
+    at /Users/ashbeher/Desktop/Personal/InterviewPrep/Automation/supertest-api-test/test/users-advanced.js:28:51
+    at processTicksAndRejections (internal/process/next_tick.js:81:5)]]></failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="GET" timestamp="2020-11-22T08:28:57" tests="3" file="/Users/ashbeher/Desktop/Personal/InterviewPrep/Automation/supertest-api-test/test/users-advanced.js" time="1.9160" failures="0">
+    <testcase name="Users GET GET /users" time="0.6300" classname="GET /users">
+    </testcase>
+    <testcase name="Users GET GET /users/:id" time="0.6460" classname="GET /users/:id">
+    </testcase>
+    <testcase name="Users GET GET /users with query params" time="0.6400" classname="GET /users with query params">
+    </testcase>
+  </testsuite>
+  <testsuite name="PUT" timestamp="2020-11-22T08:28:59" tests="1" file="/Users/ashbeher/Desktop/Personal/InterviewPrep/Automation/supertest-api-test/test/users-advanced.js" time="0.6010" failures="1">
+    <testcase name="Users PUT /users/:id" time="0.6010" classname="/users/:id">
+      <failure message="expected { message: &apos;Resource not found&apos; } to have deep property &apos;name&apos;" type="AssertionError"><![CDATA[AssertionError: expected { message: 'Resource not found' } to have deep property 'name'
+    at /Users/ashbeher/Desktop/Personal/InterviewPrep/Automation/supertest-api-test/test/users-advanced.js:76:51
+    at processTicksAndRejections (internal/process/next_tick.js:81:5)]]></failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="DELETE" timestamp="2020-11-22T08:28:59" tests="1" file="/Users/ashbeher/Desktop/Personal/InterviewPrep/Automation/supertest-api-test/test/users-advanced.js" time="0.5740" failures="1">
+    <testcase name="Users DELETE /users/:id" time="0.5740" classname="/users/:id">
+      <failure message="expected { message: &apos;Resource not found&apos; } to equal null" type="AssertionError"><![CDATA[AssertionError: expected { message: 'Resource not found' } to equal null
+    at /Users/ashbeher/Desktop/Personal/InterviewPrep/Automation/supertest-api-test/test/users-advanced.js:89:49
+    at processTicksAndRejections (internal/process/next_tick.js:81:5)]]></failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="Users" timestamp="2020-11-22T08:29:00" tests="6" file="/Users/ashbeher/Desktop/Personal/InterviewPrep/Automation/supertest-api-test/test/users.js" time="4.8210" failures="3">
+    <testcase name="Users GET /users" time="1.6240" classname="GET /users">
+    </testcase>
+    <testcase name="Users GET /users/:id" time="0.6400" classname="GET /users/:id">
+    </testcase>
+    <testcase name="Users GET /users with query params" time="0.6040" classname="GET /users with query params">
+    </testcase>
+    <testcase name="Users POST /users" time="0.5740" classname="POST /users">
+      <failure message="expected { message: &apos;Authentication failed&apos; } to have deep property &apos;email&apos;" type="AssertionError"><![CDATA[AssertionError: expected { message: 'Authentication failed' } to have deep property 'email'
+    at /Users/ashbeher/Desktop/Personal/InterviewPrep/Automation/supertest-api-test/test/users.js:50:47
+    at processTicksAndRejections (internal/process/next_tick.js:81:5)]]></failure>
+    </testcase>
+    <testcase name="Users PUT /users/:id" time="0.7400" classname="PUT /users/:id">
+      <failure message="expected { message: &apos;Resource not found&apos; } to have deep property &apos;name&apos;" type="AssertionError"><![CDATA[AssertionError: expected { message: 'Resource not found' } to have deep property 'name'
+    at /Users/ashbeher/Desktop/Personal/InterviewPrep/Automation/supertest-api-test/test/users.js:67:47
+    at processTicksAndRejections (internal/process/next_tick.js:81:5)]]></failure>
+    </testcase>
+    <testcase name="Users DELETE /users/:id" time="0.6390" classname="DELETE /users/:id">
+      <failure message="expected { message: &apos;Resource not found&apos; } to equal null" type="AssertionError"><![CDATA[AssertionError: expected { message: 'Resource not found' } to equal null
+    at /Users/ashbeher/Desktop/Personal/InterviewPrep/Automation/supertest-api-test/test/users.js:78:45
+    at processTicksAndRejections (internal/process/next_tick.js:81:5)]]></failure>
+    </testcase>
+  </testsuite>
+</testsuites>
