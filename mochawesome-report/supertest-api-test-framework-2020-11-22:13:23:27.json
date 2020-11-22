@@ -1,0 +1,202 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 6,
+    "passes": 5,
+    "pending": 0,
+    "failures": 1,
+    "start": "2020-11-22T07:53:29.453Z",
+    "end": "2020-11-22T07:53:33.487Z",
+    "duration": 4034,
+    "testsRegistered": 6,
+    "passPercent": 83.33333333333334,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "2602a8fe-0204-4b43-a17e-81a01deb587d",
+      "title": "",
+      "fullFile": "",
+      "file": "",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "dfcff82d-a7da-469d-9ef1-1839ce2fac4f",
+          "title": "Users",
+          "fullFile": "/Users/ashbeher/Desktop/Personal/InterviewPrep/Automation/supertest-api-test/test/users.js",
+          "file": "/test/users.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "GET /users",
+              "fullTitle": "Users GET /users",
+              "timedOut": false,
+              "duration": 846,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "return request.get(\"users?access-token= \".concat(TOKEN)).then(function (res) {\n  (0, _chai.expect)(res.body.data).to.not.be.empty;\n});",
+              "err": {},
+              "uuid": "5f512aba-7930-4de1-9956-536047a563be",
+              "parentUUID": "dfcff82d-a7da-469d-9ef1-1839ce2fac4f",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "GET /users/:id",
+              "fullTitle": "Users GET /users/:id",
+              "timedOut": false,
+              "duration": 586,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "return request.get(\"users/26?access-token= \".concat(TOKEN)).then(function (res) {\n  (0, _chai.expect)(res.body.data.id).to.be.equal(26);\n});",
+              "err": {},
+              "uuid": "1af1704b-589b-43d7-8b30-6ef4d8a49835",
+              "parentUUID": "dfcff82d-a7da-469d-9ef1-1839ce2fac4f",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "GET /users with query params",
+              "fullTitle": "Users GET /users with query params",
+              "timedOut": false,
+              "duration": 673,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "var url = \"users?access-token=\".concat(TOKEN, \"&page=5&gender=Female&status=Active\");\nreturn request.get(url).then(function (res) {\n  (0, _chai.expect)(res.body.data).to.not.be.empty;\n  res.body.data.forEach(function (data) {\n    (0, _chai.expect)(data.gender).to.be.eq('Female');\n    (0, _chai.expect)(data.status).to.be.eq('Active');\n  });\n});",
+              "err": {},
+              "uuid": "702cc333-77a1-4cff-977c-2c17a5c087f3",
+              "parentUUID": "dfcff82d-a7da-469d-9ef1-1839ce2fac4f",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "POST /users",
+              "fullTitle": "Users POST /users",
+              "timedOut": false,
+              "duration": 640,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "var data = {\n  email: \"test-\".concat(Math.floor(Math.random() * 9999), \"@mail.ca\"),\n  name: 'Test name',\n  gender: 'Male',\n  status: 'Inactive'\n};\nreturn request.post('users').set('Authorization', \"Bearer \".concat(TOKEN)).send(data).then(function (res) {\n  (0, _chai.expect)(res.body.data).to.deep.include(data);\n  userId = res.body.data.id;\n});",
+              "err": {},
+              "uuid": "4cf9af41-badd-4506-9483-7c9a73d10343",
+              "parentUUID": "dfcff82d-a7da-469d-9ef1-1839ce2fac4f",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "PUT /users/:id",
+              "fullTitle": "Users PUT /users/:id",
+              "timedOut": false,
+              "duration": 646,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "var data = {\n  name: \"Luffy-\".concat(Math.floor(Math.random() * 9999)),\n  status: 'Active'\n};\nreturn request.put(\"users/\".concat(userId)).set('Authorization', \"Bearer \".concat(TOKEN)).send(data).then(function (res) {\n  (0, _chai.expect)(res.body.data).to.deep.include(data);\n});",
+              "err": {},
+              "uuid": "f42a8310-1a81-4a25-9577-f9c1526b42fb",
+              "parentUUID": "dfcff82d-a7da-469d-9ef1-1839ce2fac4f",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "DELETE /users/:id",
+              "fullTitle": "Users DELETE /users/:id",
+              "timedOut": false,
+              "duration": 625,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "return request[\"delete\"]('users/10').set('Authorization', \"Bearer \".concat(TOKEN)).then(function (res) {\n  (0, _chai.expect)(res.body.data).to.be.eq(null);\n});",
+              "err": {
+                "message": "AssertionError: expected { message: 'Resource not found' } to equal null",
+                "estack": "AssertionError: expected { message: 'Resource not found' } to equal null\n    at /Users/ashbeher/Desktop/Personal/InterviewPrep/Automation/supertest-api-test/test/users.js:78:45\n    at processTicksAndRejections (internal/process/next_tick.js:81:5)",
+                "diff": null
+              },
+              "uuid": "4e01b328-18c9-4f7d-946a-b6db38ec473f",
+              "parentUUID": "dfcff82d-a7da-469d-9ef1-1839ce2fac4f",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "5f512aba-7930-4de1-9956-536047a563be",
+            "1af1704b-589b-43d7-8b30-6ef4d8a49835",
+            "702cc333-77a1-4cff-977c-2c17a5c087f3",
+            "4cf9af41-badd-4506-9483-7c9a73d10343",
+            "f42a8310-1a81-4a25-9577-f9c1526b42fb"
+          ],
+          "failures": [
+            "4e01b328-18c9-4f7d-946a-b6db38ec473f"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 4016,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 5000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 5000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "8.2.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "supertest-api-test-framework-2020-11-22:13:23:27",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.1"
+    },
+    "marge": {
+      "options": {
+        "reportFilename": "supertest-api-test-framework-2020-11-22:13:23:27"
+      },
+      "version": "5.1.0"
+    }
+  }
+}

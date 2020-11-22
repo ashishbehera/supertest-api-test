@@ -6,7 +6,7 @@ import { createRandomUser,createRandomUserWithFaker } from './helper/user_helper
 const faker = require('faker');
 const TOKEN = process.env.USER_TOKEN;
 const userData = require('../config/data/user.json');
-describe.only('User Posts', () => {
+describe('User Posts', () => {
 
     let postId, userId;
 

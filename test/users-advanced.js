@@ -1,8 +1,9 @@
+require('dotenv').config();
 import supertest from 'supertest';
 import { expect } from 'chai';
 
 const request = supertest('https://gorest.co.in/public-api/');
-const TOKEN = '58868398b09ced12798f9ea92bda65511748eda7817c6a5fcf1ede3ee561b6ca';
+const TOKEN = process.env.USER_TOKEN;
 
 
 describe('Users', () => {

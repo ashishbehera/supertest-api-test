@@ -1,11 +1,14 @@
+require('dotenv').config();
 import supertest from 'supertest';
 import { expect } from 'chai';
 
 const request = supertest('https://gorest.co.in/public-api/');
-const TOKEN = '58868398b09ced12798f9ea92bda65511748eda7817c6a5fcf1ede3ee561b6ca';
+const TOKEN = process.env.USER_TOKEN;
 
 
-xdescribe('Users', () => {
+describe('Users', () => {
+
+    let userId;
 
     it('GET /users', () => {
         return request.get(`users?access-token= ${TOKEN}`).then((res) => {
@@ -44,8 +47,8 @@ xdescribe('Users', () => {
             .set('Authorization', `Bearer ${TOKEN}`)
             .send(data)
             .then((res) => {
-                console.log(res.body);
                 expect(res.body.data).to.deep.include(data);
+                userId = res.body.data.id;
             });
         
     });
@@ -57,7 +60,7 @@ xdescribe('Users', () => {
         };
 
         return request
-            .put('users/10')
+            .put(`users/${userId}`)
             .set('Authorization', `Bearer ${TOKEN}`)
             .send(data)
             .then((res) => {
