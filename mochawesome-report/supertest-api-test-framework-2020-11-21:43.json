@@ -1,0 +1,218 @@
+{
+  "stats": {
+    "suites": 2,
+    "tests": 5,
+    "passes": 5,
+    "pending": 0,
+    "failures": 0,
+    "start": "2020-11-21T17:41:44.529Z",
+    "end": "2020-11-21T17:41:47.932Z",
+    "duration": 3403,
+    "testsRegistered": 5,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "1adaf884-fd24-431e-b8bb-e44db1286763",
+      "title": "",
+      "fullFile": "",
+      "file": "",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "fbf951da-35ed-4fd9-939a-5b4d72b44f28",
+          "title": "User Posts",
+          "fullFile": "/Users/ashbeher/Desktop/Personal/InterviewPrep/supertest-api-tests/test/post.js",
+          "file": "/test/post.js",
+          "beforeHooks": [
+            {
+              "title": "\"before all\" hook in \"User Posts\"",
+              "fullTitle": "User Posts \"before all\" hook in \"User Posts\"",
+              "timedOut": false,
+              "duration": 667,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "var self = this,\n    args = arguments;\nreturn new Promise(function (resolve, reject) {\n  var gen = fn.apply(self, args);\n  function _next(value) {\n    asyncGeneratorStep(gen, resolve, reject, _next, _throw, \"next\", value);\n  }\n  function _throw(err) {\n    asyncGeneratorStep(gen, resolve, reject, _next, _throw, \"throw\", err);\n  }\n  _next(undefined);\n});",
+              "err": {},
+              "uuid": "12781957-497f-4ccb-9805-0ea430f3cae8",
+              "parentUUID": "fbf951da-35ed-4fd9-939a-5b4d72b44f28",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "POST /posts",
+              "fullTitle": "User Posts POST /posts",
+              "timedOut": false,
+              "duration": 725,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "var self = this,\n    args = arguments;\nreturn new Promise(function (resolve, reject) {\n  var gen = fn.apply(self, args);\n  function _next(value) {\n    asyncGeneratorStep(gen, resolve, reject, _next, _throw, \"next\", value);\n  }\n  function _throw(err) {\n    asyncGeneratorStep(gen, resolve, reject, _next, _throw, \"throw\", err);\n  }\n  _next(undefined);\n});",
+              "err": {},
+              "uuid": "fe36483c-9cf4-428c-b9ea-fff48c56f18e",
+              "parentUUID": "fbf951da-35ed-4fd9-939a-5b4d72b44f28",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "GET /posts/:id",
+              "fullTitle": "User Posts GET /posts/:id",
+              "timedOut": false,
+              "duration": 490,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "var self = this,\n    args = arguments;\nreturn new Promise(function (resolve, reject) {\n  var gen = fn.apply(self, args);\n  function _next(value) {\n    asyncGeneratorStep(gen, resolve, reject, _next, _throw, \"next\", value);\n  }\n  function _throw(err) {\n    asyncGeneratorStep(gen, resolve, reject, _next, _throw, \"throw\", err);\n  }\n  _next(undefined);\n});",
+              "err": {},
+              "uuid": "8193acaa-564b-471d-9f4e-edfe61b0b416",
+              "parentUUID": "fbf951da-35ed-4fd9-939a-5b4d72b44f28",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [
+            {
+              "uuid": "a652b7dc-355a-49bc-917c-e416bfd80e6f",
+              "title": "Negative Tests",
+              "fullFile": "/Users/ashbeher/Desktop/Personal/InterviewPrep/supertest-api-tests/test/post.js",
+              "file": "/test/post.js",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "401 Authentication Failed",
+                  "fullTitle": "User Posts Negative Tests 401 Authentication Failed",
+                  "timedOut": false,
+                  "duration": 490,
+                  "state": "passed",
+                  "speed": "slow",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "var self = this,\n    args = arguments;\nreturn new Promise(function (resolve, reject) {\n  var gen = fn.apply(self, args);\n  function _next(value) {\n    asyncGeneratorStep(gen, resolve, reject, _next, _throw, \"next\", value);\n  }\n  function _throw(err) {\n    asyncGeneratorStep(gen, resolve, reject, _next, _throw, \"throw\", err);\n  }\n  _next(undefined);\n});",
+                  "err": {},
+                  "uuid": "c301c3df-903b-4655-b4c0-2e0b2aba9711",
+                  "parentUUID": "a652b7dc-355a-49bc-917c-e416bfd80e6f",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "422 Data Validation Failed",
+                  "fullTitle": "User Posts Negative Tests 422 Data Validation Failed",
+                  "timedOut": false,
+                  "duration": 521,
+                  "state": "passed",
+                  "speed": "slow",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "var self = this,\n    args = arguments;\nreturn new Promise(function (resolve, reject) {\n  var gen = fn.apply(self, args);\n  function _next(value) {\n    asyncGeneratorStep(gen, resolve, reject, _next, _throw, \"next\", value);\n  }\n  function _throw(err) {\n    asyncGeneratorStep(gen, resolve, reject, _next, _throw, \"throw\", err);\n  }\n  _next(undefined);\n});",
+                  "err": {},
+                  "uuid": "564581c5-2b39-481c-a831-ce31793f38cf",
+                  "parentUUID": "a652b7dc-355a-49bc-917c-e416bfd80e6f",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "422 for Invalid Data for userID",
+                  "fullTitle": "User Posts Negative Tests 422 for Invalid Data for userID",
+                  "timedOut": false,
+                  "duration": 499,
+                  "state": "passed",
+                  "speed": "slow",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "var self = this,\n    args = arguments;\nreturn new Promise(function (resolve, reject) {\n  var gen = fn.apply(self, args);\n  function _next(value) {\n    asyncGeneratorStep(gen, resolve, reject, _next, _throw, \"next\", value);\n  }\n  function _throw(err) {\n    asyncGeneratorStep(gen, resolve, reject, _next, _throw, \"throw\", err);\n  }\n  _next(undefined);\n});",
+                  "err": {},
+                  "uuid": "c24a330e-7a6d-4d11-ae3d-1cd983738f45",
+                  "parentUUID": "a652b7dc-355a-49bc-917c-e416bfd80e6f",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "c301c3df-903b-4655-b4c0-2e0b2aba9711",
+                "564581c5-2b39-481c-a831-ce31793f38cf",
+                "c24a330e-7a6d-4d11-ae3d-1cd983738f45"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 1510,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 5000
+            }
+          ],
+          "passes": [
+            "fe36483c-9cf4-428c-b9ea-fff48c56f18e",
+            "8193acaa-564b-471d-9f4e-edfe61b0b416"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 1215,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 5000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 5000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "8.2.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "supertest-api-test-framework-2020-11-21:43",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.1"
+    },
+    "marge": {
+      "options": {
+        "reportFilename": "supertest-api-test-framework-2020-11-21:43"
+      },
+      "version": "5.1.0"
+    }
+  }
+}
